@@ -49,6 +49,8 @@ Requires:	gpg
 rm -rf $RPM_BUILD_ROOT
 install -D qubes.Gpg.policy $RPM_BUILD_ROOT/etc/qubes-rpc/policy/qubes.Gpg
 install -D qubes.GpgImportKey.policy $RPM_BUILD_ROOT/etc/qubes-rpc/policy/qubes.GpgImportKey
+install -D qubes.GpgListKeys.policy $RPM_BUILD_ROOT/etc/qubes-rpc/policy/qubes.GpgListKeys
+install -D qubes.GpgListSecretKeys.policy $RPM_BUILD_ROOT/etc/qubes-rpc/policy/qubes.GpgListSecretKeys
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -56,3 +58,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %config(noreplace) %attr(0664,root,qubes) /etc/qubes-rpc/policy/qubes.Gpg
 %config(noreplace) %attr(0664,root,qubes) /etc/qubes-rpc/policy/qubes.GpgImportKey
+%config(noreplace) %attr(0664,root,qubes) /etc/qubes-rpc/policy/qubes.GpgListKeys
+%config(noreplace) %attr(0664,root,qubes) /etc/qubes-rpc/policy/qubes.GpgListSecretKeys
